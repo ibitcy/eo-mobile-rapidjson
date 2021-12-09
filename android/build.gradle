@@ -1,0 +1,72 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.0'
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 30
+    ndkVersion '22.1.7171670'
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 30
+
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++17"
+                arguments "-DANDROID_STL=c++_shared"
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            sourceSets {
+                main {
+                    manifest.srcFile 'AndroidManifest.xml'
+                }
+            }
+        }
+
+        release {
+            sourceSets {
+                main {
+                    manifest.srcFile 'AndroidManifest.xml'
+                }
+            }
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+
+    buildFeatures {
+        prefabPublishing true
+    }
+
+    prefab {
+        rapidjson {
+            headers "../include"
+        }
+    }
+
+    packagingOptions {
+        exclude("**/librapidjson.so")
+        exclude("**/libc++_shared.so")
+    }
+}
+
+repositories {
+    google()
+    mavenCentral()
+}
