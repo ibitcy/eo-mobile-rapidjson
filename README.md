@@ -1,16 +1,22 @@
-[![](https://jitpack.io/v/ibitcy/eo-mobile-rapidjson.svg)](https://jitpack.io/#ibitcy/eo-mobile-rapidjson)
+<p align="center">
+    <a href="https://jitpack.io/#ibitcy/eo-mobile-rapidjson"><img src="https://jitpack.io/v/ibitcy/eo-mobile-rapidjson.svg"/></a>
+    <a href="http://cocoapods.org/pods/eo-mobile-rapidjson"><img src="https://img.shields.io/cocoapods/v/eo-mobile-rapidjson.svg?style=flat" alt="Version"/></a>
+</p>
 
-## Rapidjson 1.1.0 prefab
 
-Easy to use solution to use [Rapidjson](https://rapidjson.org) with your NDK Library
+# Rapidjson 1.1.0
 
-## Before you start
+Easy to use solution for including [Rapidjson](https://rapidjson.org) into your Android (using prefab) and iOS projects/libraries
+
+# Android
+
+### Before you start
 
 This package made for using it with Gradle's "prefab" dependencies system.
 
 So it's better to start with reading more about it [here](https://developer.android.com/studio/build/dependencies?buildsystem=cmake#native-dependencies-with-agp) or [here](https://github.com/android/ndk-samples/tree/main/prefab).
 
-## How to
+### How to
 
 1. Add dependencies to your build.gradle:
 ```gradle
@@ -36,3 +42,20 @@ target_link_libraries(
 )
 ```
 3. Build! 🎉🎉🎉
+
+# iOS
+
+1. Add this string to your Podfile
+
+```ruby
+pod 'eo-mobile-rapidjson'
+```
+2. run `pod install` in your project's directory
+3. Build! 🎉🎉🎉
+
+# Finally
+
+Now you can use it, including like a dynamic library:
+```C++
+#include <rapidjson/document.h>
+```
