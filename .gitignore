@@ -15,3 +15,4 @@
 /android/.cxx
 /android/local.properties
 /android/.idea/
+/ios/product/rapidjson.xcframework
