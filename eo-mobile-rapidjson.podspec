@@ -1,8 +1,8 @@
 Pod::Spec.new do |spec|
   spec.name         = "eo-mobile-rapidjson"
-  spec.version      = "1.1.0"
+  spec.version      = "1.2.0"
   spec.summary      = "eo-mobile-rapidjson"
-  spec.description  = "Rapidjson 1.1.0 packed into .xcframework for using into ios/mac projects via #import/#include <rapidjson/document.h>"
+  spec.description  = "Rapidjson 1.2.0 packed into .xcframework for using into ios/mac projects via #import/#include <rapidjson/document.h>"
   spec.homepage     = "https://www.ibitcy.com"
   spec.license      = { :type => 'MIT', :text => 'The MIT License (MIT)
 
@@ -26,6 +26,6 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.' }
   spec.author       = { "author" => "stepan.kopylov@ibitcy.com" }
   spec.platform     = :ios, "9.3"
-  spec.source       = { :http => "https://github.com/ibitcy/eo-mobile-rapidjson/raw/main/ios/product/rapidjson_1.1.0.zip", :type => "zip" }
+  spec.source       = { :http => "https://github.com/ibitcy/eo-mobile-rapidjson/raw/main/ios/product/rapidjson_1.2.0.zip", :type => "zip" }
   spec.ios.vendored_frameworks = 'rapidjson.xcframework'
 end

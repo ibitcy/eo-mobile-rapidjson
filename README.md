@@ -4,7 +4,8 @@
 </p>
 
 
-# Rapidjson 1.1.0
+
+# Rapidjson 1.2.0
 
 Easy to use solution for including [Rapidjson](https://rapidjson.org) into your Android (using prefab) and iOS projects/libraries
 
@@ -26,7 +27,7 @@ repositories {
 ..
 dependencies {
     ..
-    implementation 'com.github.ibitcy:eo-mobile-rapidjson:1.1.0'
+    implementation 'com.github.ibitcy:eo-mobile-rapidjson:1.2.0'
     ..
 }
 ```
