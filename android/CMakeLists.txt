@@ -20,6 +20,7 @@ project(rapidjson LANGUAGES CXX)
 add_library(rapidjson SHARED)
 target_include_directories(rapidjson PUBLIC include)
 
-target_link_options(rapidjson PRIVATE "-Wl,-z,max-page-size=16384")
-
-set_target_properties(rapidjson PROPERTIES LINKER_LANGUAGE CXX)
+set_target_properties(rapidjson PROPERTIES
+    LINKER_LANGUAGE CXX
+    LINK_FLAGS "-Wl,-z,max-page-size=16384"
+)
